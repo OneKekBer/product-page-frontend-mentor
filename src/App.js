@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, useMediaQuery } from "@mui/material";
+import Header from "./components/header";
+import Main from "./scences/main";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    const isNonMobileScreen = useMediaQuery("(min-width:996px)");
+
+    return (
+        <Box
+            sx={{
+                padding: isNonMobileScreen ? "20px 100px" : "20px 30px",
+            }}
+            className="App"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <Header />
+            <Main />
+        </Box>
+    );
 }
 
 export default App;

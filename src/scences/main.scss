@@ -1,0 +1,38 @@
+
+
+.wrapper{
+    align-items: center;
+}
+
+
+.swiper{
+    border-radius: 16px;
+
+    &__slide{
+        
+        img{
+            max-width: 100%;
+            border-radius: 16px;
+        }
+    }
+    
+}
+
+.discount{
+    text-decoration: line-through;
+}
+
+.counter{
+    border-radius: 8px;
+    &__button{
+        padding: 8px;
+        color: hsl(26, 100%, 55%);
+        background-color: rgb(228, 228, 228);
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+
+       
+    }
+}
